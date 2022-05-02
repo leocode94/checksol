@@ -1,0 +1,83 @@
+body {
+    background-color: lightgrey;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+}
+
+.container_superior {
+    background-color: white;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.container_central {
+    background-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: auto;
+    padding: 20px;
+    width: 500px;
+}
+
+.container_central h2 {
+    text-align: center;
+}
+
+input[type=text]:read-only {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px 10px;
+    text-align: center;
+    width: 100%;
+}
+
+input[type=number] {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+input[type=button] {
+    background-color: lightblue;
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea {
+    background-color: lightgray;
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+}
+
+select {
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+/* Remove arrows dos inputs do tipo number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
