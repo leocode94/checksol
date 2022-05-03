@@ -1,7 +1,5 @@
-// Esconde "Qual a condição do barramento...?" se barramento não for coletivo
-// Esconde "127/220 V" e "220/380 V" se a ligação for "Monofásica"
-// Esconde "127 V" e "220 V" se a ligação for "Bifásica" ou "Trifásica"
 $(document).ready(function () {
+    // Esconde "Qual a condição do barramento...?" se barramento não for coletivo
     $('#barramento_sim, #barramento_nao').click(function () {
         if ($('#barramento_sim').is(':checked')) {
             $('#barramento_condicao_all').show();
@@ -10,13 +8,14 @@ $(document).ready(function () {
             $('#barramento_condicao_all').hide();
         }
     });
-
+    // Esconde "127/220 V" e "220/380 V" se a ligação for "Monofásica"
     $('#tipo_de_ligacao_monofasica,#tipo_de_ligacao_bifasica, #tipo_de_ligacao_trifasica').click(function () {
         if ($('#tipo_de_ligacao_monofasica').is(':checked')) {
             $('#tensao_bifasica_trifasica').hide();
             $('#tensao_monofasica').show();
             $('br').append();
         }
+        // Esconde "127 V" e "220 V" se a ligação for "Bifásica" ou "Trifásica"
         if ($('#tipo_de_ligacao_bifasica,#tipo_de_ligacao_trifasica').is(':checked')) {
             $('#tensao_monofasica').hide();
             $('#tensao_bifasica_trifasica').show();
