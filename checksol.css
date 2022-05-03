@@ -9,7 +9,7 @@ body {
     background-color: white;
     box-sizing: border-box;
     font-size: 16px;
-    margin: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     text-align: center;
 }
@@ -64,6 +64,7 @@ textarea {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+    padding: 10px;
     width: 100%;
 }
 
