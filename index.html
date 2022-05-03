@@ -60,7 +60,7 @@
                 <input type="radio" id="tensao_220_380" name="tensao" value="220/380 V">
                 <label for="tensao_220_380">220/380 V</label><br>
             </div><br>
-            
+
             <label for="tensao_fase_fase">Tensão medida entre fase e fase:</label>
             <input type="number" id="tensao_fase_fase" name="tensao_medida" min="0">
             <label for="tensao_fase_neutro">Tensão medida entre fase e neutro:</label><br>
@@ -104,11 +104,13 @@
                 value="Necessita adequação">
             <label for="condicao_padrao_necessita_adequacao">Necessita adequação</label><br>
 
-            <p><label for="o_que_adequar_padrao">O que adequar (trocar cabos [bitola], caixa, disjuntor, barramento,
-                    eletroduto
-                    etc):</label></p>
-            <textarea id="o_que_adequar_padrao" name="o_que_adequar_padrao" rows="10" cols="52"></textarea><br><br>
-            <input type="button" value="SALVAR">
+            <div id="o_que_adequar_1">
+                <p><label for="o_que_adequar_padrao">O que adequar (trocar cabos [bitola], caixa, disjuntor, barramento,
+                        eletroduto
+                        etc):</label></p>
+                <textarea id="o_que_adequar_padrao" name="o_que_adequar_padrao" rows="5" cols="52"></textarea><br><br>
+                <input type="button" value="SALVAR"><br><br>
+            </div>
 
             <h2>Quadro de distribuição geral</h2>
             <p>Há disjuntor geral?</p>
@@ -154,11 +156,11 @@
             <p><label for="o_que_adequar_quadro">O que adequar (trocar cabos [bitola], caixa, disjuntor, trilho,
                     barramento,
                     eletroduto etc):</label></p>
-            <textarea id="o_que_adequar_quadro" name="o_que_adequar_quadro" rows="10" cols="52"></textarea><br><br>
+            <textarea id="o_que_adequar_quadro" name="o_que_adequar_quadro" rows="5" cols="52"></textarea><br><br>
             <input type="button" value="SALVAR"><br><br>
 
             <label for="valor_adequacao">Valor da adequação:</label><br>
-            <input type="number" id="valor_adequacao" name="valor_adequacao" min="0"><br>
+            <input type="number" id="valor_adequacao" name="valor_adequacao" min="0"><br><br>
 
             <h2>Ambiente de instalação dos módulos</h2>
             <p>Qual é o local?</p>
@@ -190,8 +192,8 @@
             <label for="condicao_caibro_ruim">Ruim</label><br>
 
             <p><label for="o_que_adequar_telhado">O que adequar (acrescentar ripas, caibros, terças etc):</label></p>
-            <textarea id="o_que_adequar_telhado" name="o_que_adequar_telhado" rows="10" cols="52"></textarea><br><br>
-            <input type="button" value="SALVAR"><br>
+            <textarea id="o_que_adequar_telhado" name="o_que_adequar_telhado" rows="5" cols="52"></textarea><br><br>
+            <input type="button" value="SALVAR"><br><br>
 
             <h2>Planejamento de instalação no telhado</h2>
             <p>Como será feito o acesso dos colaboradores ao telhado?</p>
@@ -241,25 +243,32 @@
                 <option value="agua_4">4</option>
             </select><br><br>
 
-            <label for="largura_frente">Largura da água [frente]:</label><br>
+            <label for="largura_frente">Largura útil da água [frente]:</label><br>
             <input type="number" id="largura_frente" name="largura_frente" min="0"><br>
-            <label for="comprimento_frente">Comprimento da água [frente]:</label><br>
+            <label for="comprimento_frente">Comprimento útil da água [frente]:</label><br>
             <input type="number" id="comprimento_frente" name="comprimento_frente" min="0"><br>
-            <label for="largura_tras">Largura da água [trás]:</label><br>
+            <label for="largura_tras">Largura útil da água [trás]:</label><br>
             <input type="number" id="largura_tras" name="largura_tras" min="0"><br>
-            <label for="comprimento_tras">Comprimento da água [trás]:</label><br>
+            <label for="comprimento_tras">Comprimento útil da água [trás]:</label><br>
             <input type="number" id="comprimento_tras" name="comprimento_tras" min="0"><br>
-            <label for="largura_esquerda">Largura da água [esquerda]:</label><br>
+            <label for="largura_esquerda">Largura útil da água [esquerda]:</label><br>
             <input type="number" id="largura_esquerda" name="largura_esquerda" min="0"><br>
-            <label for="comprimento_esquerda">Comprimento da água [esquerda]:</label><br>
+            <label for="comprimento_esquerda">Comprimento útil da água [esquerda]:</label><br>
             <input type="number" id="comprimento_esquerda" name="comprimento_esquerda" min="0"><br>
-            <label for="largura_direita">Largura da água [direita]:</label><br>
+            <label for="largura_direita">Largura útil da água [direita]:</label><br>
             <input type="number" id="largura_direita" name="largura_direita" min="0"><br>
-            <label for="comprimento_direita">Comprimento da água [direita]:</label><br>
+            <label for="comprimento_direita">Comprimento útil da água [direita]:</label><br>
             <input type="number" id="comprimento_direita" name="comprimento_direita" min="0"><br>
 
-            <input type="button" onclick="calcularArea()" value="CALCULAR ÁREA"><br>
-            <input type="text" id="resultado" placeholder="O resultado será exibido aqui." readonly>
+            <input type="button" onclick="calcularAreas()" value="CALCULAR ÁREAS"><br>
+            <input type="text" id="resultado_agua_frente" placeholder="O cálculo da água da frente será exibido aqui."
+                readonly>
+            <input type="text" id="resultado_agua_tras" placeholder="O cálculo da água de trás será exibido aqui."
+                readonly>
+            <input type="text" id="resultado_agua_esquerda"
+                placeholder="O cálculo da água da esquerda será exibido aqui." readonly>
+            <input type="text" id="resultado_agua_direita" placeholder="O cálculo da água da direita será exibido aqui."
+                readonly>
 
             <p>Há forro?</p>
             <input type="radio" id="forro_sim" name="forro" value="Sim">
@@ -285,8 +294,8 @@
 
             <p><label for="o_que_adequar_objeto">O que adequar (remover antena, cortar árvore, considerar chaminé,
                     retirar tanque, usar microinversores etc):</label></p>
-            <textarea id="o_que_adequar_objeto" name="o_que_adequar_objeto" rows="10" cols="52"></textarea><br><br>
-            <input type="button" value="SALVAR"><br>
+            <textarea id="o_que_adequar_objeto" name="o_que_adequar_objeto" rows="5" cols="52"></textarea><br><br>
+            <input type="button" value="SALVAR"><br><br>
 
             <h2>Inversor, string box CA e CC</h2>
             <label for="largura_parede">Largura da parede:</label><br>
@@ -308,9 +317,11 @@
             <label for="distancia_ca_aterramento">Distância da string box CA até o aterramento:</label><br>
             <input type="number" id="distancia_ca_aterramento" name="distancia_ca_aterramento" min="0"><br>
 
-            <p>Conversar com cliente sobre instalação ser de embutir (contratar pedreiro) ou de sobrepor e para escolher
+            <p style="text-align: justify;">Conversar com cliente sobre instalação ser de embutir (contratar pedreiro)
+                ou de sobrepor e para escolher
                 a parede correta (bem ventilada e de fácil acesso).</p>
-            <p>Tirar fotos e fazer vídeos da conta de energia, do local onde serão instalados os módulos fotovoltaicos,
+            <p style="text-align: justify;"><strong>Tirar fotos e fazer vídeos</strong> da conta de energia, do local
+                onde serão instalados os módulos fotovoltaicos,
                 do quadro de distribuição geral e do local das string box CA, CC e inversor.</p>
     </div>
 
