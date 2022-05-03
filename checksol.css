@@ -28,6 +28,16 @@ body {
     text-align: center;
 }
 
+.container_central p {
+    color: rgb(167, 127, 28);
+    font-weight: bold;
+}
+
+#input_labels {
+    color: rgb(167, 127, 28);
+    font-weight: bold;
+}
+
 input[type=text]:read-only {
     border: 2px solid lightblue;
     border-radius: 5px;
@@ -51,6 +61,15 @@ input[type=number] {
 
 input[type=button] {
     background-color: lightblue;
+    border: 2px solid lightslategray;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+input[type=button]:hover {
+    background-color: lightskyblue;
     border: 2px solid lightslategray;
     border-radius: 5px;
     font-size: 16px;
