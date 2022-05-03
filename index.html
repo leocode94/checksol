@@ -29,14 +29,14 @@
             <input type="radio" id="barramento_sim" name="barramento_coletivo" value="Sim">
             <label for="barramento_sim">Sim</label><br>
             <input type="radio" id="barramento_nao" name="barramento_coletivo" value="Não">
-            <label for="barramento_nao">Não</label><br>
+            <label for="barramento_nao">Não</label><br><br>
 
             <div id="barramento_condicao_all">
                 <p>Qual a condição do barramento coletivo?</p>
                 <input type="radio" id="barramento_boa" name="barramento_condicao" value="Boa">
                 <label for="barramento_boa">Boa</label><br>
                 <input type="radio" id="barramento_ruim" name="barramento_condicao" value="Ruim">
-                <label for="barramento_ruim">Ruim</label><br>
+                <label for="barramento_ruim">Ruim</label><br><br>
             </div>
 
             <p>Qual o tipo de ligação?</p>
@@ -45,7 +45,7 @@
             <input type="radio" id="tipo_de_ligacao_bifasica" name="tipo_de_ligacao" value="Bifásica">
             <label for="tipo_de_ligacao_bifasica">Bifásica</label><br>
             <input type="radio" id="tipo_de_ligacao_trifasica" name="tipo_de_ligacao" value="Trifásica">
-            <label for="tipo_de_ligacao_trifasica">Trifásica</label><br>
+            <label for="tipo_de_ligacao_trifasica">Trifásica</label><br><br>
 
             <p>Qual é a tensão?</p>
             <div id="tensao_monofasica">
@@ -61,11 +61,11 @@
                 <label for="tensao_220_380">220/380 V</label><br>
             </div><br>
 
-            <label for="tensao_fase_fase">Tensão medida entre fase e fase:</label>
+            <label for="tensao_fase_fase" id="input_labels">Tensão medida entre fase e fase:</label>
             <input type="number" id="tensao_fase_fase" name="tensao_medida" min="0">
-            <label for="tensao_fase_neutro">Tensão medida entre fase e neutro:</label><br>
+            <label for="tensao_fase_neutro" id="input_labels">Tensão medida entre fase e neutro:</label><br>
             <input type="number" id="tensao_fase_neutro" name="tensao_medida" min="0"><br>
-            <label for="disjuntor_do_padrao">Disjuntor do padrão:</label><br>
+            <label for="disjuntor_do_padrao" id="input_labels">Disjuntor do padrão:</label><br>
             <input type="number" id="disjuntor_do_padrao" name="disjuntor_do_padrao" min="0"><br>
 
             <p>Qual é o tipo de disjuntor?</p>
@@ -76,38 +76,37 @@
             <input type="radio" id="tipo_de_disjuntor_tripolar" name="tipo_de_disjuntor_padrao" value="Tripolar">
             <label for="tipo_de_disjuntor_tripolar">Tripolar</label><br><br>
 
-            <label for="bitola_padrao">Qual é a bitola dos condutores do padrão de entrada?</label><br>
+            <label for="bitola_padrao" id="input_labels">Qual é a bitola dos condutores do padrão de
+                entrada?</label><br>
             <input type="number" id="bitola_padrao" name="bitola_padrao" min="0"><br>
 
             <p>Qual é o tipo de condutor?</p>
             <input type="radio" id="tipo_de_condutor_cobre" name="tipo_de_condutor" value="Cobre">
             <label for="tipo_de_condutor_cobre">Cobre</label><br>
             <input type="radio" id="tipo_de_condutor_aluminio" name="tipo_de_condutor" value="Alumínio">
-            <label for="tipo_de_condutor_aluminio">Alumínio</label><br>
+            <label for="tipo_de_condutor_aluminio">Alumínio</label><br><br>
 
             <p>Qual é o tipo de cabo?</p>
             <input type="radio" id="tipo_de_cabo_rigido" name="tipo_de_cabo" value="Rígido">
             <label for="tipo_de_cabo_rigido">Rígido</label><br>
             <input type="radio" id="tipo_de_cabo_flexivel" name="tipo_de_cabo" value="Flexível">
-            <label for="tipo_de_cabo_flexivel">Flexível</label><br>
+            <label for="tipo_de_cabo_flexivel">Flexível</label><br><br>
 
             <p>Há aterramento adequado?</p>
             <input type="radio" id="aterramento_sim" name="aterramento_padrao" value="Sim">
             <label for="aterramento_sim">Sim</label><br>
             <input type="radio" id="aterramento_nao" name="aterramento_padrao" value="Não">
-            <label for="aterramento_nao">Não</label><br>
+            <label for="aterramento_nao">Não</label><br><br>
 
             <p>Qual é a condição do padrão de entrada?</p>
             <input type="radio" id="condicao_padrao_boa" name="condicao_padrao" value="Boa">
             <label for="condicao_padrao_boa">Boa</label><br>
             <input type="radio" id="condicao_padrao_necessita_adequacao" name="condicao_padrao"
                 value="Necessita adequação">
-            <label for="condicao_padrao_necessita_adequacao">Necessita adequação</label><br>
+            <label for="condicao_padrao_necessita_adequacao">Necessita adequação</label><br><br>
 
             <div id="o_que_adequar_1">
-                <p><label for="o_que_adequar_padrao">O que adequar (trocar cabos [bitola], caixa, disjuntor, barramento,
-                        eletroduto
-                        etc):</label></p>
+                <p><label for="o_que_adequar_padrao">O que adequar (trocar cabos, caixa, disjuntor, eletroduto etc):</label></p>
                 <textarea id="o_que_adequar_padrao" name="o_que_adequar_padrao" rows="5" cols="52"></textarea><br><br>
                 <input type="button" value="SALVAR"><br><br>
             </div>
@@ -119,7 +118,7 @@
             <input type="radio" id="disjuntor_geral_nao" name="disjuntor_geral" value="Não">
             <label for="disjuntor_geral_nao">Não</label><br><br>
 
-            <label for="corrente_disjuntor_geral">Qual é a corrente do disjuntor geral?</label><br>
+            <label for="corrente_disjuntor_geral" id="input_labels">Qual é a corrente do disjuntor geral?</label><br>
             <input type="number" id="corrente_disjuntor_geral" name="corrente_disjuntor_geral" min="0"><br>
 
             <p>Qual é o tipo de disjuntor?</p>
@@ -131,45 +130,42 @@
             <input type="radio" id="tipo_de_disjuntor__geral_tripolar" name="tipo_de_disjuntor_geral" value="Tripolar">
             <label for="tipo_de_disjuntor__geral_tripolar">Tripolar</label><br><br>
 
-            <label for="bitola_padrao_quadro">Qual é a bitola do condutor vindo do padrão de entrada até o
-                quadro?</label><br>
+            <label for="bitola_padrao_quadro" id="input_labels">Qual é a seção do condutor do padrão até o quadro?</label><br>
             <input type="number" id="bitola_padrao_quadro" name="bitola_padrao_quadro" min="0"><br>
 
             <p>Qual é a condição do quadro?</p>
             <input type="radio" id="condicao_quadro_boa" name="condicao_quadro" value="Boa">
             <label for="condicao_quadro_boa">Boa</label><br>
             <input type="radio" id="condicao_quadro_ruim" name="condicao_quadro" value="Ruim">
-            <label for="condicao_quadro_ruim">Ruim</label><br>
+            <label for="condicao_quadro_ruim">Ruim</label><br><br>
 
             <p>Há aterramento adequado?</p>
             <input type="radio" id="aterramento_quadro_sim" name="aterramento_quadro" value="Sim">
             <label for="aterramento_quadro_sim">Sim</label><br>
             <input type="radio" id="aterramento_quadro_nao" name="aterramento_quadro" value="Não">
-            <label for="aterramento_quadro_nao">Não</label><br>
+            <label for="aterramento_quadro_nao">Não</label><br><br>
 
             <p>A conexão do sistema será feita no quadro geral?</p>
             <input type="radio" id="conexao_sistema_sim" name="conexao_sistema" value="Sim">
             <label for="conexao_sistema_sim">Sim</label><br>
             <input type="radio" id="conexao_sistema_nao" name="conexao_sistema" value="Não">
-            <label for="conexao_sistema_nao">Não</label><br>
+            <label for="conexao_sistema_nao">Não</label><br><br>
 
-            <p><label for="o_que_adequar_quadro">O que adequar (trocar cabos [bitola], caixa, disjuntor, trilho,
-                    barramento,
-                    eletroduto etc):</label></p>
+            <p><label for="o_que_adequar_quadro">O que adequar (trocar cabos, caixa, disjuntor, barramento etc):</label></p>
             <textarea id="o_que_adequar_quadro" name="o_que_adequar_quadro" rows="5" cols="52"></textarea><br><br>
             <input type="button" value="SALVAR"><br><br>
 
-            <label for="valor_adequacao">Valor da adequação:</label><br>
+            <label for="valor_adequacao" id="input_labels">Valor da adequação:</label><br>
             <input type="number" id="valor_adequacao" name="valor_adequacao" min="0"><br><br>
 
-            <h2>Ambiente de instalação dos módulos</h2>
+            <h2>Instalação dos módulos</h2>
             <p>Qual é o local?</p>
             <input type="radio" id="local_telhado" name="local" value="Telhado">
             <label for="local_telhado">Telhado</label><br>
             <input type="radio" id="local_laje" name="local" value="Laje">
             <label for="local_laje">Laje</label><br>
             <input type="radio" id="local_solo" name="local" value="Solo">
-            <label for="local_solo">Solo</label><br>
+            <label for="local_solo">Solo</label><br><br>
 
             <p>Qual é o material dos caibros?</p>
             <input type="radio" id="caibro_madeira" name="caibro" value="Madeira">
@@ -177,30 +173,30 @@
             <input type="radio" id="caibro_metal" name="caibro" value="Metal">
             <label for="caibro_metal">Metal</label><br>
             <input type="radio" id="caibro_concreto" name="caibro" value="Concreto">
-            <label for="caibro_concreto">Concreto</label><br>
+            <label for="caibro_concreto">Concreto</label><br><br>
 
             <p>Qual é a condição das telhas?</p>
             <input type="radio" id="condicao_telha_boa" name="condicao_telha" value="Boa">
             <label for="condicao_telha_boa">Boa</label><br>
             <input type="radio" id="condicao_telha_ruim" name="condicao_telha" value="Ruim">
-            <label for="condicao_telha_ruim">Ruim</label><br>
+            <label for="condicao_telha_ruim">Ruim</label><br><br>
 
             <p>Qual é a condição dos caibros?</p>
             <input type="radio" id="condicao_caibro_boa" name="condicao_caibro" value="Boa">
             <label for="condicao_caibro_boa">Boa</label><br>
             <input type="radio" id="condicao_caibro_ruim" name="condicao_caibro" value="Ruim">
-            <label for="condicao_caibro_ruim">Ruim</label><br>
+            <label for="condicao_caibro_ruim">Ruim</label><br><br>
 
             <p><label for="o_que_adequar_telhado">O que adequar (acrescentar ripas, caibros, terças etc):</label></p>
             <textarea id="o_que_adequar_telhado" name="o_que_adequar_telhado" rows="5" cols="52"></textarea><br><br>
             <input type="button" value="SALVAR"><br><br>
 
-            <h2>Planejamento de instalação no telhado</h2>
+            <h2>Planejamento da instalação</h2>
             <p>Como será feito o acesso dos colaboradores ao telhado?</p>
             <input type="radio" id="acesso_telhado_escada" name="acesso_telhado" value="Escada">
             <label for="acesso_telhado_escada">Escada</label><br>
             <input type="radio" id="acesso_telhado_andaime" name="acesso_telhado" value="Andaime">
-            <label for="acesso_telhado_andaime">Andaime</label><br>
+            <label for="acesso_telhado_andaime">Andaime</label><br><br>
 
             <p>Como será feito o acesso das placas ao telhado?</p>
             <input type="radio" id="acesso_telhado_placa_escada" name="acesso_telhado_placa" value="Escada">
@@ -208,7 +204,7 @@
             <input type="radio" id="acesso_telhado_placa_andaime" name="acesso_telhado_placa" value="Andaime">
             <label for="acesso_telhado_placa_andaime">Andaime</label><br><br>
 
-            <label for="orientacao">Orientação do telhado:</label>
+            <label for="orientacao" id="input_labels">Orientação do telhado:</label>
             <select name="orientacao" id="orientacao">
                 <option value="norte">Norte</option>
                 <option value="sul">Sul</option>
@@ -216,7 +212,7 @@
                 <option value="oeste">Oeste</option>
             </select><br><br>
 
-            <label for="tipo_de_telha">Tipo de telha:</label>
+            <label for="tipo_de_telha" id="input_labels">Tipo de telha:</label>
             <select name="tipo_de_telha" id="tipo_de_telha">
                 <option value="colonial_ceramica">Colonial cerâmica</option>
                 <option value="colonial_concreto">Colonial de concreto</option>
@@ -230,12 +226,13 @@
                 <option value="fibrocimento_kalheta">Fibrocimento kalheta</option>
             </select><br><br>
 
-            <label for="altura_da_telha">Altura da telha para compra dos parafusos corretos:</label><br>
+            <label for="altura_da_telha" id="input_labels">Altura da telha para compra dos parafusos
+                corretos:</label><br>
             <input type="number" id="altura_da_telha" name="altura_da_telha" min="0"><br>
-            <label for="distancia_caibro">Distância entre caibros:</label><br>
+            <label for="distancia_caibro" id="input_labels">Distância entre caibros:</label><br>
             <input type="number" id="distancia_caibro" name="distancia_caibro" min="0"><br>
 
-            <label for="quantidade_de_aguas">Qual é a quantidade de águas?</label>
+            <label for="quantidade_de_aguas" id="input_labels">Qual é a quantidade de águas?</label>
             <select name="quantidade_de_aguas" id="quantidade_de_aguas">
                 <option value="agua_1">1</option>
                 <option value="agua_2">2</option>
@@ -243,21 +240,21 @@
                 <option value="agua_4">4</option>
             </select><br><br>
 
-            <label for="largura_frente">Largura útil da água [frente]:</label><br>
+            <label for="largura_frente" id="input_labels">Largura útil da água [frente]:</label><br>
             <input type="number" id="largura_frente" name="largura_frente" min="0"><br>
-            <label for="comprimento_frente">Comprimento útil da água [frente]:</label><br>
+            <label for="comprimento_frente" id="input_labels">Comprimento útil da água [frente]:</label><br>
             <input type="number" id="comprimento_frente" name="comprimento_frente" min="0"><br>
-            <label for="largura_tras">Largura útil da água [trás]:</label><br>
+            <label for="largura_tras" id="input_labels">Largura útil da água [trás]:</label><br>
             <input type="number" id="largura_tras" name="largura_tras" min="0"><br>
-            <label for="comprimento_tras">Comprimento útil da água [trás]:</label><br>
+            <label for="comprimento_tras" id="input_labels">Comprimento útil da água [trás]:</label><br>
             <input type="number" id="comprimento_tras" name="comprimento_tras" min="0"><br>
-            <label for="largura_esquerda">Largura útil da água [esquerda]:</label><br>
+            <label for="largura_esquerda" id="input_labels">Largura útil da água [esquerda]:</label><br>
             <input type="number" id="largura_esquerda" name="largura_esquerda" min="0"><br>
-            <label for="comprimento_esquerda">Comprimento útil da água [esquerda]:</label><br>
+            <label for="comprimento_esquerda" id="input_labels">Comprimento útil da água [esquerda]:</label><br>
             <input type="number" id="comprimento_esquerda" name="comprimento_esquerda" min="0"><br>
-            <label for="largura_direita">Largura útil da água [direita]:</label><br>
+            <label for="largura_direita" id="input_labels">Largura útil da água [direita]:</label><br>
             <input type="number" id="largura_direita" name="largura_direita" min="0"><br>
-            <label for="comprimento_direita">Comprimento útil da água [direita]:</label><br>
+            <label for="comprimento_direita" id="input_labels">Comprimento útil da água [direita]:</label><br>
             <input type="number" id="comprimento_direita" name="comprimento_direita" min="0"><br>
 
             <input type="button" onclick="calcularAreas()" value="CALCULAR ÁREAS"><br>
@@ -274,7 +271,7 @@
             <input type="radio" id="forro_sim" name="forro" value="Sim">
             <label for="forro_sim">Sim</label><br>
             <input type="radio" id="forro_nao" name="forro" value="Não">
-            <label for="forro_nao">Não</label><br>
+            <label for="forro_nao">Não</label><br><br>
 
             <p>Qual é o tipo do forro?</p>
             <input type="radio" id="tipo_de_forro_pvc" name="tipo_de_forro" value="PVC">
@@ -284,23 +281,22 @@
             <input type="radio" id="tipo_de_forro_madeira" name="tipo_de_forro" value="Madeira">
             <label for="tipo_de_forro_madeira">Madeira</label><br>
             <input type="radio" id="tipo_de_forro_laje" name="tipo_de_forro" value="Laje">
-            <label for="tipo_de_forro_laje">Laje</label><br>
+            <label for="tipo_de_forro_laje">Laje</label><br><br>
 
-            <p>Há alguma objeto (antena, árvore, tanque) sombreando o telhado?</p>
+            <p>Há alguma objeto (antena, tanque) sombreando o telhado?</p>
             <input type="radio" id="objeto_no_telhado_sim" name="objeto_no_telhado" value="Sim">
             <label for="objeto_no_telhado_sim">Sim</label><br>
             <input type="radio" id="objeto_no_telhado_nao" name="objeto_no_telhado" value="Não">
-            <label for="objeto_no_telhado_nao">Não</label><br>
+            <label for="objeto_no_telhado_nao">Não</label><br><br>
 
-            <p><label for="o_que_adequar_objeto">O que adequar (remover antena, cortar árvore, considerar chaminé,
-                    retirar tanque, usar microinversores etc):</label></p>
+            <p><label for="o_que_adequar_objeto">O que adequar (remover antena, considerar chaminé etc):</label></p>
             <textarea id="o_que_adequar_objeto" name="o_que_adequar_objeto" rows="5" cols="52"></textarea><br><br>
             <input type="button" value="SALVAR"><br><br>
 
             <h2>Inversor, string box CA e CC</h2>
-            <label for="largura_parede">Largura da parede:</label><br>
+            <label for="largura_parede" id="input_labels">Largura da parede:</label><br>
             <input type="number" id="largura_parede" name="largura_parede" min="0"><br>
-            <label for="altura_parede">Altura da parede:</label><br>
+            <label for="altura_parede" id="input_labels">Altura da parede:</label><br>
             <input type="number" id="altura_parede" name="altura_parede" min="0"><br>
 
             <p>Há WiFi próximo do local do inversor?</p>
@@ -309,13 +305,15 @@
             <input type="radio" id="wifi_nao" name="wifi" value="Não">
             <label for="wifi_nao">Não</label><br><br>
 
-            <label for="distancia_placas_aterramento">Distância do arranjo fotovoltaico até as hastes de
-                aterramento:</label><br>
+            <label for="distancia_placas_aterramento" id="input_labels">Distância do arranjo fotovoltaico até as hastes
+                de aterramento:</label><br>
             <input type="number" id="distancia_placas_aterramento" name="distancia_placas_aterramento" min="0"><br>
-            <label for="distancia_ca_quadro">Distância da string box CA até o quadro de conexão na rede:</label><br>
+            <label for="distancia_ca_quadro" id="input_labels">Distância da string box CA até o quadro de conexão na
+                rede:</label><br>
             <input type="number" id="distancia_ca_quadro" name="distancia_ca_quadro" min="0"><br>
-            <label for="distancia_ca_aterramento">Distância da string box CA até o aterramento:</label><br>
-            <input type="number" id="distancia_ca_aterramento" name="distancia_ca_aterramento" min="0"><br>
+            <label for="distancia_ca_aterramento" id="input_labels">Distância da string box CA até o
+                aterramento:</label><br>
+            <input type="number" id="distancia_ca_aterramento" name="distancia_ca_aterramento" min="0"><br><br>
 
             <p style="text-align: justify;">Conversar com cliente sobre instalação ser de embutir (contratar pedreiro)
                 ou de sobrepor e para escolher
