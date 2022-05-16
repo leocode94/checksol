@@ -2,6 +2,8 @@
 
 #### Este é um checklist web simples para usar em visitas de energia solar.
 
+![Screenshot_20220516_103635](https://user-images.githubusercontent.com/50475381/168605392-0e4f82f0-546f-4353-a8d0-e2f8c6485975.png)
+
 #### Funcionalidades:
 
 1. Registrar dados básicos
