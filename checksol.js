@@ -46,49 +46,49 @@ function calcularAreas() {
     if (isNaN(calculoAreaFrente)) {
         calculoAreaFrente = document.getElementById("resultado_agua_frente").value = "0.00";
     } else if (calculoAreaFrente < 10.0) {
-        calculoAreaFrente = calculoAreaFrente.toPrecision(3)
+        calculoAreaFrente = calculoAreaFrente.toPrecision(3);
     } else if (calculoAreaFrente < 100.0) {
-        calculoAreaFrente = calculoAreaFrente.toPrecision(4)
+        calculoAreaFrente = calculoAreaFrente.toPrecision(4);
     } else if (calculoAreaFrente < 1000.0) {
-        calculoAreaFrente = calculoAreaFrente.toPrecision(5)
+        calculoAreaFrente = calculoAreaFrente.toPrecision(5);
     } else {
-        calculoAreaFrente = calculoAreaFrente.toPrecision(6)
+        calculoAreaFrente = calculoAreaFrente.toPrecision(6);
     }
 
     if (isNaN(calculoAreaTras)) {
         calculoAreaTras = document.getElementById("resultado_agua_tras").value = "0.00";
     } else if (calculoAreaTras < 10.0) {
-        calculoAreaTras = calculoAreaTras.toPrecision(3)
+        calculoAreaTras = calculoAreaTras.toPrecision(3);
     } else if (calculoAreaTras < 100.0) {
-        calculoAreaTras = calculoAreaTras.toPrecision(4)
+        calculoAreaTras = calculoAreaTras.toPrecision(4);
     } else if (calculoAreaTras < 1000.0) {
-        calculoAreaTras = calculoAreaTras.toPrecision(5)
+        calculoAreaTras = calculoAreaTras.toPrecision(5);
     } else {
-        calculoAreaTras = calculoAreaTras.toPrecision(6)
+        calculoAreaTras = calculoAreaTras.toPrecision(6);
     }
 
     if (isNaN(calculoAreaEsquerda)) {
         calculoAreaEsquerda = document.getElementById("resultado_agua_esquerda").value = "0.00";
     } else if (calculoAreaEsquerda < 10.0) {
-        calculoAreaEsquerda = calculoAreaEsquerda.toPrecision(3)
+        calculoAreaEsquerda = calculoAreaEsquerda.toPrecision(3);
     } else if (calculoAreaEsquerda < 100.0) {
-        calculoAreaEsquerda = calculoAreaEsquerda.toPrecision(4)
+        calculoAreaEsquerda = calculoAreaEsquerda.toPrecision(4);
     } else if (calculoAreaEsquerda < 1000.0) {
-        calculoAreaEsquerda = calculoAreaEsquerda.toPrecision(5)
+        calculoAreaEsquerda = calculoAreaEsquerda.toPrecision(5);
     } else {
-        calculoAreaEsquerda = calculoAreaEsquerda.toPrecision(6)
+        calculoAreaEsquerda = calculoAreaEsquerda.toPrecision(6);
     }
 
     if (isNaN(calculoAreaDireita)) {
         calculoAreaDireita = document.getElementById("resultado_agua_direita").value = "0.00";
     } else if (calculoAreaDireita < 10.0) {
-        calculoAreaDireita = calculoAreaDireita.toPrecision(3)
+        calculoAreaDireita = calculoAreaDireita.toPrecision(3);
     } else if (calculoAreaDireita < 100.0) {
-        calculoAreaDireita = calculoAreaDireita.toPrecision(4)
+        calculoAreaDireita = calculoAreaDireita.toPrecision(4);
     } else if (calculoAreaDireita < 1000.0) {
-        calculoAreaDireita = calculoAreaDireita.toPrecision(5)
+        calculoAreaDireita = calculoAreaDireita.toPrecision(5);
     } else {
-        calculoAreaDireita = calculoAreaDireita.toPrecision(6)
+        calculoAreaDireita = calculoAreaDireita.toPrecision(6);
     }
 
     return [document.getElementById("resultado_agua_frente").value = ("Água da frente: " + calculoAreaFrente + " m²"),
