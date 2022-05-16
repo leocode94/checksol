@@ -25,7 +25,7 @@
         <form action="#">
 
             <h2>Padrão de entrada</h2>
-            <p>Barramento coletivo?</p>
+            <p>Existe um barramento coletivo?</p>
             <input type="radio" id="barramento_sim" name="barramento_coletivo" value="Sim">
             <label for="barramento_sim">Sim</label><br>
             <input type="radio" id="barramento_nao" name="barramento_coletivo" value="Não">
@@ -108,7 +108,7 @@
             <div id="o_que_adequar_1">
                 <p><label for="o_que_adequar_padrao">O que adequar (trocar cabos, caixa, disjuntor, eletroduto etc):</label></p>
                 <textarea id="o_que_adequar_padrao" name="o_que_adequar_padrao" rows="5" cols="52"></textarea><br><br>
-                <input type="button" value="SALVAR"><br><br>
+                <input class="botao_de_salvar_1" type="button" value="SALVAR"><br><br>
             </div>
 
             <h2>Quadro de distribuição geral</h2>
@@ -322,6 +322,8 @@
                 onde serão instalados os módulos fotovoltaicos,
                 do quadro de distribuição geral e do local das string box CA, CC e inversor.</p>
     </div>
+
+    <div id="div_aviso_condutor">TESTE</div>
 
     <script src="checksol.js"></script>
 
